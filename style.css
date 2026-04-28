@@ -60,7 +60,7 @@ nav{
 
 .main{
   height: 500px;
-  background: url("../cat.jpg") center/cover;
+  background: url("cat.jpg") center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;

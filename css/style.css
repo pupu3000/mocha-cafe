@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+html{font-size: 100%;}
+
+body{
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+  color:#432;
+}
+
+a{
+  text-decoration: none;
+  color: #432;
+}
+
+img{max-width: 100%;
+}
+
+.wrapper{
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+.align-center{
+  text-align: center;
+}
+
+.font-english{
+  font-family: 'philosopher',sans-serif;
+  font-weight: normal;
+}
+
+.page-title,
+.heading-large{
+  font-size: 3rem;
+  text-align: center;
+}
+
+.page-title{
+  margin-top: 2rem;
+  line-height:1.4;
+}
+
+.heading-large{
+  margin-bottom: 1rem;
+}
+
+.btn{
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 8px;
+  padding: .75rem 1.5rem;
+  transition: .5s;
+}
+
+.btn:hover{
+  background-color: #0090aa;
+  scale: 1.2;
+  translate: 10px;
+}
+
+.page-header{
+  padding-top: 5rem;
+  color: #fff;
+}
+.page-header a{
+  color: #fff;
+}
+
+.logo{
+  width: 210px;
+}
+
+.main-nav{
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.main-nav a{
+  position: relative;
+  color: #fff;
+}
+
+.main-nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #0bd;
+  transition: 0.3s;
+}
+.main-nav a:hover{
+  color:#0bd;
+}
+.main-nav a:hover::after{
+  width: 100%;
+}
+
+.cover{
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 60vh;
+}
+
+.cover-home{
+  background-image: url("../images/cover-home-s.png");
+  position: relative;
+}
+
+.cover-home::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.cover-home h2{
+  position: relative;
+  color: #fff;
+}
+
+.about{max-width: 736px;
+  padding: 0 1.5rem;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
+}
+
+.about p{
+  margin-bottom: 3rem;
+}
+.page-footer{
+  position: relative;
+  background-image: url("../images/footer-s.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+.info{
+  width: 100%;
+  max-width: 544px;
+  margin: auto;
+  padding: 0 1.5rem;
+  border-spacing: 0;
+  padding-top: 4rem;
+}
+.info th,
+.info td{
+  border-bottom: 1px solid #c9c2bc;
+}
+info th{
+  text-align: left;
+  font-weight: normal;
+  padding: 1rem;
+}
+.info td{
+  padding: 1rem 0;
+}
+
+@media(min-width: 800px){
+  .page-title{
+    font-size: 5rem;
+  }
+  .heading-large{
+    font-size: 4rem;
+  }
+  .page-header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    
+  }
+  .main-nav{
+    font-size: 2rem;
+  }
+
+  .cover-home{
+    background-image: url(../images/cover-home-l.webp);
+  }
+  .about{
+    margin: 4rem auto 0;
+  }
+  .page-footer{
+    background-image: url(../images/footer-s.webp);
+  }
+  .info th{
+    padding-left: 2.5rem;
+  }
+}
+
+.copyright{
+  background-color: #432;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 6rem;
+  color: #fff;
+}
+
+

@@ -1,228 +1,205 @@
 
+@charset "UTF-8";
+
+html{font-size: 100%;}
 
 body{
-  margin: 0;
-  font-family: sans-serif;
-  background: #f8f5f2;
-  color: #333;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+  color:#432;
+}
+
+a{
+  text-decoration: none;
+  color: #432;
+}
+
+img{max-width: 100%;
+}
+
+.wrapper{
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+.align-center{
   text-align: center;
-  padding-top: 100px;
 }
 
-h1{
-  margin-top: 100px;
-  font-size: 48px;
-  color: #4b2e2e;
+.font-english{
+  font-family: 'philosopher',sans-serif;
+  font-weight: normal;
 }
 
-p{
-  font-size: 22px;
-  margin-top: 20px;
+.page-title,
+.heading-large{
+  font-size: 3rem;
+  text-align: center;
 }
 
-header{
+.page-title{
+  margin-top: 2rem;
+  line-height:1.4;
+}
+
+.heading-large{
+  margin-bottom: 1rem;
+}
+
+.btn{
+  display: inline-block;
+  font-size: 1.5rem;
+  background-color: #0bd;
+  color: #fff;
+  border-radius: 8px;
+  padding: .75rem 1.5rem;
+  transition: .5s;
+}
+
+.btn:hover{
+  background-color: #0090aa;
+  scale: 1.2;
+  translate: 10px;
+}
+
+.page-header{
+  padding-top: 5rem;
+  color: #fff;
+}
+.page-header a{
+  color: #fff;
+}
+
+.logo{
+  width: 210px;
+}
+
+.main-nav{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #4b2e2e;
-  color: white;
-  position: fixed;
-  top: 0;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+.main-nav a{
+  position: relative;
+  color: #fff;
+}
+
+.main-nav a::after{
+  content: "";
+  position: absolute;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  box-sizing: border-box;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-header h1{
-  margin: 0;
-  font-size: 32px;
-}
-
-nav a{
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-nav{
-  display: flex;
-  gap: 20px;
-}
-
-.menu-btn{
-  display: none;
-  font-size: 32px;
-  cursor: pointer;
-}
-
-.main{
-  height: 500px;
-  background: url("images/cafe.jpg") center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.main h2{
-  font-size: 48px;
-  margin-top: 15px;
-}
-
-nav a:hover{
-  color: #ffd9b3;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #0bd;
   transition: 0.3s;
 }
-
-.menu{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 60px 20px;
+.main-nav a:hover{
+  color:#0bd;
+}
+.main-nav a:hover::after{
+  width: 100%;
 }
 
-.card{
-  background: white;
-  width: 220px;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
-  text-align: center;  
+.cover{
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 60vh;
 }
 
-.card h3{
-  margin-top: 0;
-  color: #4b2e2e;
+.cover-home{
+  background-image: url("../images/cover-home-s.png");
+  position: relative;
 }
 
-.card:hover{
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+.cover-home::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
-.contact{
-  text-align: center;
-  padding: 40px 20px 80px;
+.cover-home h2{
+  position: relative;
+  color: #fff;
 }
 
-.contact a{
-  display: inline-block;
-  background: #4b2e2e ;
-  color: white;
-  text-decoration: none;
-  padding: 15px 35px;
-  border-radius: 30px;
-  transition: 0.3s;
-  transform: scale(1);
+.about{max-width: 736px;
+  padding: 0 1.5rem;
+  margin: 4rem auto;
+  padding-bottom: 4rem;
 }
 
-.contact a:hover{
-  background: #6b4444;
-  transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-footer{
-  background: #4b2e2e;
-  color: white;
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-@media (max-width:768px){
-  header{
-    flex-direction: column;
-    padding: 15px;
-  }
-  nav{
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-  }
-  nav a{
-    margin-left: 0;
-  }
-.menu{
-  flex-direction: column;
-  align-items: center;
-}
-.menu-btn{
-  display: block;
-  font-size: 32px;
-  color: white;
-}
-nav.show{
-  display: flex;
-  flex-direction: column;
-}
-h1{
-  font-size: 32px;
-  }
-}
-
-#cat{
-  opacity: 0;
-  transition: 0.5s;
-  margin-top: 20px;
-}
-
-.card{
-  opacity: 0;
-  transform: translateY(30px);
-  animation:fadeUp 0.8s forwards;
-}
-
-.card:nth-child(1){
-  animation-delay: 0.2s;
-}
-.card:nth-child(2){
-  animation-delay: 0.5s;
-}
-.card:nth-child(3){
-  animation-delay: 0.8s;
-}
-@keyframes fadeUp{
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.about{
-  background: white;
-  margin: 40px 20px;
-  padding: 50px 20px;
-  border-radius: 15px;
-}
-.about h2{
-  color: #4b2e2e;
-  margin-bottom: 20px;
-}
 .about p{
-  font-size: 18px;
-  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+.page-footer{
+  position: relative;
+  background-image: url("../images/footer-s.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+.info{
+  width: 100%;
+  max-width: 544px;
+  margin: auto;
+  padding: 0 1.5rem;
+  border-spacing: 0;
+  padding-top: 4rem;
+}
+.info th,
+.info td{
+  border-bottom: 1px solid #c9c2bc;
+}
+info th{
+  text-align: left;
+  font-weight: normal;
+  padding: 1rem;
+}
+.info td{
+  padding: 1rem 0;
 }
 
-.skills{
-  margin-top: 25px;
+@media(min-width: 800px){
+  .page-title{
+    font-size: 5rem;
+  }
+  .heading-large{
+    font-size: 4rem;
+  }
+  .page-header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    
+  }
+  .main-nav{
+    font-size: 2rem;
+  }
+
+  .cover-home{
+    background-image: url(../images/cover-home-l.webp);
+  }
+  .about{
+    margin: 4rem auto 0;
+  }
+  .page-footer{
+    background-image: url(../images/footer-s.webp);
+  }
+  .info th{
+    padding-left: 2.5rem;
+  }
 }
-.skills span{
-  display: inline-block;
-  background: #4b2e2e;
-  color: white;
-  padding: 8px 15px;
-  margin: 5px;
-  border-radius: 20px;
-  font-size: 14px;
+
+.copyright{
+  background-color: #432;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 6rem;
+  color: #fff;
 }
+
+

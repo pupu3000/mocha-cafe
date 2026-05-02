@@ -1,108 +1,84 @@
 <!DOCTYPE html>
 
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>MOCHA CAFE</title>
-    <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8">
+  <title>WCB Cafe</title>
+
+  <meta name="description" content="ブレンドコーヒーとヘルシーなオーガニックフードを提供するカフェ">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-    <h1>MOCHA CAFE</h1>
-    <div class="menu-btn" onclick="openMenu()">☰</div>
-<nav> 
-    <a href="#">ホーム</a>
-    <a href="#menu">メニュー</a>
-    <a href="#">店舗情報</a>
-    <a href="#contact">お問い合せ</a>
-</nav>
-
+<div class="cover cover-home">
+  <header class="page-header wrapper">
+    <h1 class="align-center font-english">
+    <a href="index.html">WCB CAFE</a>
+    </h1>
+    <nav>
+        <ul class="main-nav font-english">
+            <li><a href="news.html">News</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="main">
-    <h2>丁寧に作った架空のカフェサイト</h2>
-    <p>HTML・CSS・JavaScriptで制作しました。</p>
-</section>
+<h2 class="page-title font-english">We'll Make Your Day</h2> 
 
-<section class="menu" id="menu">
-    <div class="card">
-        <h3>カフェラテ</h3>
-        <p>まろやかな人気NO.1</p>
-    </div>
-    <div class="card">
-        <h3>チーズケーキ</h3>
-        <p>しっとり濃厚な味わい</p>
-    </div>
-    <div class="card">
-        <h3>ブレンドコーヒー</h3>
-        <p>香り高い定番の一杯</p>
-    </div>
-    <div class="card">
-       <h3>季節限定パフェ</h3>
-        <p>彩り豊かな人気スイーツ</p>
-    </div>
-
-</section>
-
-<section class="contact" id="contact">
-    <a id="btn" href="javascript:void(0)" onclick="hello()">お問い合わせはこちら</a>
-    <p id="msg"></p>
-    <img id="cat" src="cat.jpg" style="display: none; width: 200px; border: 3px solid red;">
-</section>
+</div>
 
 <section class="about">
-    <h2>このサイトについて</h2>
-    <p>架空のカフェサイトとして制作しました</p>
-    <p>HTML・CSS・JavaScriptを使用し、スマホ対応も実装しています。</p>
-<div class="skills">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavasSript</span>
-    <span>Reaponsive</span>
-</div>
+    <h3 class="heading-large font-english">About Dafe</h3>
+    <p>
+        WCB CAFEは無添加の厳選食材とおしゃれな店内が魅力のカフェです。心と身体に優しい、それでいて飽きのこない空間を用意しています。
+        素材の本来の美味しさを引き出したメニューを楽しみながら、癒しの空間をお過ごしください。
+    </p>
+
+    <div class="align-center">
+        <a class="btn" href="menu.html">メニューを見る</a>
+    </div>
 </section>
 
-<footer>
-    <p>© 2026 Mocha Portfolio sample</p>
+<footer class="page-footer">
+    <h3 class="heading-large font-english">Information</h3>
+    <table class="info">
+        <tr>
+            <th>住所</th>
+            <td>東京都港区六本木0-0</td>
+        </tr>
+        <tr>
+            <th>電話</th>
+            <td>03-1111-XXXX</td>
+        </tr>
+        <tr>
+            <th>営業時間</th>
+            <td>10:00~20:00</td>
+        </tr>
+        <tr>
+            <th>定休日</th>
+            <td>水曜</td>
+        </tr>
+    </table>
+
+    <div class="copyright">
+        <small>&copy; 2010 WCB Cafe</small>
+    </div>
+
+    
 </footer>
-
-<script>
-    let count=0;
-
-    function hello(){
-        const msg=document.getElementById("msg");
-        const btn=document.getElementById("btn");
-        const cat=document.getElementById("cat");
-
-        count++;
-
-        if(count===1){
-            msg.innerText="ご連絡ありがとうございます!";
-            btn.style.background="#6b4444";
-        }else if (count===2){
-            msg.innerText="スタッフが確認しています";
-            btn.style.background="#8b5e5e";
-        }else {
-            msg.innerText="少々お待ちください";
-            btn.style.background="#4b2e2e";
-            count=0;
-        }          
-        
-        msg.style.color="#4b2e2e"
-        msg.style.fontSize="28px";
-
-        cat.style.display="block";
-        cat.style.opacity="1";
-    }
-
-        function openMenu() {
-        const nav=document.querySelector("nav");
-        nav.classList.toggle("show");
-        }
-</script>
-
 </body>
+
 </html>
